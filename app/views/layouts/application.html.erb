@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CodeSnippets</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <%= link_to 'All Snippets', snippets_path %> |
+    <%= link_to 'New Snippet', new_snippet_path %> |
+  </div>
+</nav>
+
+
+    <%= yield %>
+  </body>
+</html>

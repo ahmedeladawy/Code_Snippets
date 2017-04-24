@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset(8)">
+      <h1>Code Snippets</h1>
+
+      <% @kinds.each do |kind| %>
+        <h3 class='well'><%= link_to "#{kind.name} (#{Snippet.where(kind_id: kind.id).count} snippets)", kind_path(kind.id) %></h3>
+      <% end %>
+
+    </div>
+  </div>
+</div>

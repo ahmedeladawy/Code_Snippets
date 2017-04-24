@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <h1><%= @snippet.title %></h1>
+      <%= CodeRay.scan(@snippet.work, :ruby).div(:line_numbers => :table).html_safe %>
+      <%= link_to "Edit", edit_snippet_path(@snippet), class: "btn btn-default" %>
+      <%= link_to "Delete", snippet_path(@snippet), method: :delete,
+                                                   data: { confirm: "Are you sure?"}, class: "btn btn-default" %>
+    </div>
+  </div>
+</div>
